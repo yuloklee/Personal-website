@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { useTrail, useSpring, animated } from "react-spring"
 import styled from "styled-components"
-import "./styles.css"
+import "../css/styles.css"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
