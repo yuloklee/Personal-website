@@ -1,21 +1,50 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import { useTrail, useSpring, animated } from "react-spring"
+import styled from "styled-components"
+import "./styles.css"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi everyone</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const items = ["Hi, my", "name is", "Joshua"]
+const config = { mass: 5, tension: 2000, friction: 200 }
+
+const IndexPage = () => {
+  const [toggle, set] = useState(true)
+  const trail = useTrail(items.length, {
+    config,
+    opacity: toggle ? 1 : 0,
+    x: toggle ? 0 : 20,
+    height: toggle ? 80 : 0,
+    from: { opacity: 0, x: 20, height: 0 },
+  })
+
+  return (
+    <div className="trails-main" onClick={() => set(state => !state)}>
+      <div>
+        {trail.map(({ x, height, ...rest }, index) => (
+          <animated.div
+            key={items[index]}
+            className="trails-text"
+            style={{
+              ...rest,
+              transform: x.interpolate(x => `translate3d(0,${x}px,0)`),
+            }}
+          >
+            <animated.div style={{ height }}>{items[index]}</animated.div>
+          </animated.div>
+        ))}
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  )
+}
+
+const Masthead = styled(animated.h1)`
+  position: absolute;
+  top: 60%;
+  left: 10%;
+`
 
 export default IndexPage

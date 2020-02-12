@@ -10,14 +10,18 @@ const SecondPage = () => {
   const [isToggled, setToggle] = useState(false)
   const trail = useTrail(10, {
     opacity: isToggled ? 1 : 0,
-    width: isToggled ? "90%" : "100%",
+    width: isToggled ? "90%" : "0%",
+    config: {
+      friction: 80,
+      tension: 800,
+    },
   })
   const fadeUp = useSpring({
     opacity: isToggled ? 1 : 0,
-    transform: isToggled ? "translateY(0px)" : "translateY(100px)",
-    delay: isToggled ? 600 : 200,
+    transform: isToggled ? "translateY(0px)" : "translateY(30px)",
+    delay: isToggled ? 300 : 200,
     config: {
-      friction: isToggled ? 100 : 50,
+      friction: isToggled ? 20 : 30,
     },
   })
 
@@ -29,7 +33,7 @@ const SecondPage = () => {
         {trail.map(props => (
           <animated.div style={props} />
         ))}
-        {isToggled && <Masthead style={fadeUp}>Hello Friends</Masthead>}
+        {<Masthead style={fadeUp}>Hello Friends</Masthead>}
       </Container>
       <Link to="/">Go back to the homepage</Link>
     </Layout>
