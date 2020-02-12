@@ -41,10 +41,4 @@ const IndexPage = () => {
   )
 }
 
-const Masthead = styled(animated.h1)`
-  position: absolute;
-  top: 60%;
-  left: 10%;
-`
-
 export default IndexPage

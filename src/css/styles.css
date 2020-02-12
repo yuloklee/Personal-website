@@ -13,7 +13,7 @@ body {
 
 body {
   font-family: segoe ui;
-  src: url("./Segoe UI.ttf");
+  src: url("../Segoe UI.ttf");
   background: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -56,7 +56,7 @@ body {
     height: 100px;
     line-height: 70px;
     color: rgb(240, 143, 143);
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 800;
     text-transform: uppercase;
     will-change: transform, opacity;
