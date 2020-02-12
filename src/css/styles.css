@@ -13,7 +13,7 @@ body {
 
 body {
   font-family: segoe ui;
-  src: url("../Segoe UI.ttf");
+  src: url("Segoe UI.ttf") format("truetype");
   background: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
