@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { useTrail, useSpring, animated } from "react-spring"
 import styled from "styled-components"
 import "../css/styles.css"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -25,6 +26,11 @@ const IndexPage = () => {
 
   return (
     <div>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Joshua Lee</title>
+          <link rel="canonical" href="https://yulok.me/" />
+        </Helmet>
     <div className="trails-main" onClick={() => set(state => !state)}>
       <div>
         {trail.map(({ x, height, ...rest }, index) => (
