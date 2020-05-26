@@ -30,13 +30,20 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 560px) {
   /* comes into effect for screens less than or equal to 320 pixels */
   body {
-    width: 100%;
+    width: 110%;
     height: 100%;
     margin: 0;
-    padding-top: 40%;
+    padding-top: 35%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .trails-main {
@@ -48,6 +55,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .trails-text {
@@ -56,11 +70,18 @@ body {
     height: 100px;
     line-height: 70px;
     color: rgb(240, 143, 143);
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 800;
     text-transform: uppercase;
     will-change: transform, opacity;
     overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
@@ -73,6 +94,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .trails-text {
@@ -86,10 +114,24 @@ body {
   text-transform: uppercase;
   will-change: transform, opacity;
   overflow: hidden;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .trails-text > div {
   overflow: hidden;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .links {
@@ -107,7 +149,7 @@ body {
 .links a {
   color:black;
   text-decoration: none;
-  padding-inline-start: 10mm;
+  padding-inline-start: 8mm;
 }
 
 .links a:hover{
