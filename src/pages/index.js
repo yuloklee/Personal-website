@@ -11,11 +11,12 @@ import SEO from "../components/seo"
 
 const items = ["Hi, my", "name is", "Joshua"]
 const config = { mass: 5, tension: 2000, friction: 200 }
+const linkConfig = { mass: 5, tension: 2000, friction: 250  }
 
 
 const IndexPage = () => {
   const [toggle, set] = useState(true)
-  const props = useSpring({opacity: 1, y: 0, x: -20, height: 80, from: {opacity: 0, y:30, height:0}})
+  const props = useSpring({config: linkConfig, opacity: 1, y: 0, x: -10, height: 80, from: {opacity: 0, y:-30, height:0}})
   const trail = useTrail(items.length, {
     config,
     opacity: toggle ? 1 : 0,
@@ -50,7 +51,8 @@ const IndexPage = () => {
       </div>
     </div>
     <animated.div className="links" style={props}>
-      <a href='https://github.com/yuloklee'>Github</a>
+    <a href='mailto:j763lee@uwaterloo.ca'>Email</a>          
+    <a href='https://github.com/yuloklee'>Github</a>
     <a href='https://drive.google.com/file/d/1BnRtsgLRcBxxN5m0Dm2gRHFBRSIOxBdK/view?usp=sharing'>Resume</a>
     <a href='https://www.linkedin.com/in/joshua-lee-81694a175/'>Linkedin</a>
     </animated.div>
