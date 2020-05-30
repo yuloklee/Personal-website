@@ -11,12 +11,12 @@ import SEO from "../components/seo"
 
 const items = ["Hi, my", "name is", "Joshua"]
 const config = { mass: 5, tension: 2000, friction: 200 }
-const linkConfig = { mass: 5, tension: 2000, friction: 250  }
+const linkConfig = { mass: 5, tension: 2000, friction: 200  }
 
 
 const IndexPage = () => {
   const [toggle, set] = useState(true)
-  const props = useSpring({config: linkConfig, opacity: 1, y: 0, x: -10, height: 80, from: {opacity: 0, y:-30, height:0}})
+  const props = useSpring({opacity: 1, y: 0, x: -10, height: 80, from: {opacity: 0, y:-40, height:0}})
   const trail = useTrail(items.length, {
     config,
     opacity: toggle ? 1 : 0,
